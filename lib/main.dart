@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'screens/login_screen.dart';
 
+/// Titik masuk aplikasi Flutter yang menjalankan widget utama JelajahYuk.
 void main() {
   // Titik awal aplikasi Flutter
   runApp(const JelajahYukApp());
 }
 
+/// Mengatur konfigurasi global aplikasi, tema, dan halaman awal.
 class JelajahYukApp extends StatelessWidget {
   const JelajahYukApp({super.key});
 
