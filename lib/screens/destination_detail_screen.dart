@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import '../widgets/travel_widgets.dart';
 
 // Halaman detail destinasi wisata
+/// Menampilkan informasi lengkap dari destinasi wisata yang dipilih pengguna.
 class DestinationDetailScreen extends StatefulWidget {
   final Destination destination;
 
@@ -13,11 +14,13 @@ class DestinationDetailScreen extends StatefulWidget {
       _DestinationDetailScreenState();
 }
 
+/// Mengelola status simpan atau favorit dan berbagi pada halaman detail.
 class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
   // Status untuk menyimpan destinasi sebagai favorit
   bool isSaved = false;
 
   // Fungsi untuk menyimpan atau menghapus favorit
+  /// Mengubah status favorit destinasi dan menampilkan pesan kepada pengguna.
   void toggleSave() {
     setState(() {
       isSaved = !isSaved;
@@ -36,6 +39,7 @@ class _DestinationDetailScreenState extends State<DestinationDetailScreen> {
   }
 
   // Fungsi untuk membagikan informasi destinasi
+  /// Menyalin ringkasan destinasi ke clipboard agar dapat dibagikan pengguna.
   Future<void> shareDestination() async {
     final destination = widget.destination;
 
