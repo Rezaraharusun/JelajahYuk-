@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+/// Kolom pencarian yang meneruskan perubahan teks ke halaman pemanggil.
 // WIDGET 1: Pencarian tempat wisata
 class SearchWidget extends StatelessWidget {
   final ValueChanged<String> onChanged;
@@ -25,6 +26,7 @@ class SearchWidget extends StatelessWidget {
   }
 }
 
+/// Tombol untuk menyalin pesan singkat tentang aplikasi ke clipboard.
 // WIDGET 2: Tombol berbagi aplikasi
 class ShareWidget extends StatelessWidget {
   const ShareWidget({super.key});
@@ -58,6 +60,7 @@ class ShareWidget extends StatelessWidget {
   }
 }
 
+/// Menampilkan informasi lokasi dalam bentuk ikon dan teks.
 // WIDGET 3: Informasi lokasi wisata
 class LocationWidget extends StatelessWidget {
   final String location;
@@ -101,6 +104,7 @@ class LocationWidget extends StatelessWidget {
   }
 }
 
+/// Model data yang menyimpan nama, lokasi, gambar, dan deskripsi destinasi.
 // MODEL DATA: Informasi tempat wisata
 class Destination {
   final String name;
@@ -116,6 +120,7 @@ class Destination {
   });
 }
 
+/// Kartu interaktif yang menampilkan ringkasan destinasi dan menangani ketukan.
 // WIDGET: Kartu tempat wisata
 
 class DestinationCard extends StatelessWidget {
