@@ -2,6 +2,7 @@ import 'destination_detail_screen.dart';
 import 'package:flutter/material.dart';
 import '../widgets/travel_widgets.dart';
 
+/// Halaman utama yang menyapa pengguna dan menampilkan rekomendasi wisata.
 class HomeScreen extends StatefulWidget {
   final String userName;
 
@@ -11,11 +12,13 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
+/// Mengelola kata kunci pencarian dan data destinasi yang ditampilkan.
 class _HomeScreenState extends State<HomeScreen> {
   // Menyimpan kata kunci pencarian
   String searchQuery = '';
 
   // Data contoh tempat wisata
+  /// Data contoh destinasi yang menjadi sumber daftar wisata pada halaman utama.
   final List<Destination> destinations = const [
     Destination(
       name: 'Pantai Parangtritis',
@@ -41,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Memfilter destinasi berdasarkan nama atau lokasi
+    // Memfilter destinasi berdasarkan nama atau lokasi sesuai kata kunci pengguna.
     final filteredDestinations = destinations.where((destination) {
       final name = destination.name.toLowerCase();
       final location = destination.location.toLowerCase();
