@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'home_screen.dart';
 
+/// Menampilkan formulir login untuk memasukkan nama, email, dan password.
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -8,6 +9,7 @@ class LoginScreen extends StatefulWidget {
   State<LoginScreen> createState() => _LoginScreenState();
 }
 
+/// Mengelola input, validasi formulir, dan interaksi pada halaman login.
 class _LoginScreenState extends State<LoginScreen> {
   // Controller untuk mengambil input pengguna
   final TextEditingController nameController = TextEditingController();
@@ -19,6 +21,7 @@ class _LoginScreenState extends State<LoginScreen> {
   bool obscurePassword = true;
 
   @override
+  /// Melepaskan controller ketika halaman ditutup agar tidak terjadi kebocoran memori.
   void dispose() {
     nameController.dispose();
     emailController.dispose();
@@ -27,6 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   // Fungsi untuk masuk ke halaman utama
+  /// Memvalidasi formulir, lalu membuka HomeScreen jika seluruh input valid.
   void login() {
     if (formKey.currentState!.validate()) {
       Navigator.pushReplacement(
